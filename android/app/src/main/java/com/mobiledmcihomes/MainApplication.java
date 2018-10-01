@@ -12,6 +12,8 @@ import com.facebook.soloader.SoLoader;
 import java.util.Arrays;
 import java.util.List;
 
+import com.BV.LinearGradient.LinearGradientPackage;
+
 public class MainApplication extends Application implements ReactApplication {
 
   private final ReactNativeHost mReactNativeHost = new ReactNativeHost(this) {
@@ -24,7 +26,8 @@ public class MainApplication extends Application implements ReactApplication {
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
-            new VectorIconsPackage()
+            new VectorIconsPackage(),
+            new LinearGradientPackage() // <---- and This!
       );
     }
 
@@ -32,6 +35,7 @@ public class MainApplication extends Application implements ReactApplication {
     protected String getJSMainModuleName() {
       return "index";
     }
+
   };
 
   @Override
@@ -44,4 +48,6 @@ public class MainApplication extends Application implements ReactApplication {
     super.onCreate();
     SoLoader.init(this, /* native exopackage */ false);
   }
+
+  
 }
