@@ -1,76 +1,49 @@
-import React from 'react';
-import { View, Text, Button, AsyncStorage } from 'react-native';
-import { createSwitchNavigator, createStackNavigator } from 'react-navigation';
-import DashboardScreen from './src/pages/DashboardScreen'
-import AuthLoadingScreen from './src/pages/AuthLoadingScreen'
+import React, { Fragment } from "react";
+import { View, Text, Button, AsyncStorage, StatusBar } from "react-native";
+import { createSwitchNavigator, createStackNavigator } from "react-navigation";
+import DashboardScreen from "./src/pages/DashboardScreen";
+import AuthLoadingScreen from "./src/pages/AuthLoadingScreen";
+import BillsPaymentScreen from "./src/pages/BillsPaymentScreen";
+import CommunityScreen from "./src/pages/CommunityScreen";
+import InquiriesScreen from "./src/pages/InquiriesScreen";
 
+import LoginScreen from "./src/pages/LoginScreen";
 
+import ServiceScreen from "./src/pages/ServiceScreen";
+import TermsScreen from "./src/pages/TermsScreen";
 
-class HomeScreen extends React.Component {
-  static navigationOptions = {
-    title: 'Welcome to the app!',
-  };
+import VideoScreen from "./src/pages/VideoScreen";
+import WalkthroughScreen from "./src/pages/WalkthroughScreen";
 
-  render() {
-    return (
-      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-        <Button title="Show me more of the app" onPress={this._showMoreApp} />
-        <Button title="Actually, sign me out :)" onPress={this._signOutAsync} />
-      </View>
-    );
-  }
-
-  _showMoreApp = () => {
-    this.props.navigation.navigate('Dashboard');
-  };
-
-  _signOutAsync = async () => {
-    await AsyncStorage.clear();
-    this.props.navigation.navigate('Auth');
-  };
-}
-
-
-class SignInScreen extends React.Component {
-  static navigationOptions = {
-    title: 'Please sign in',
-    header: null
-  };
-
-  render() {
-    return (
-      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-        <Button title="Sign in!" onPress={this._signInAsync} />
-      </View>
-    );
-  }
-
-  _signInAsync = async () => {
-    await AsyncStorage.setItem('userToken', 'abc');
-    this.props.navigation.navigate('App');
-  };
-}
-
-
-
-const AppStack = createStackNavigator({ Home: HomeScreen, Dashboard: DashboardScreen });
-const AuthStack = createStackNavigator({ SignIn: SignInScreen});
-
-const RootStack = createSwitchNavigator(
+const AppStack = createStackNavigator(
   {
-    AuthLoading: AuthLoadingScreen,
-    App: AppStack,
-    Auth: AuthStack,
+    Walkthrough: WalkthroughScreen,
+    Terms: TermsScreen,
+    Video: VideoScreen,
+    Login: LoginScreen,
+    Dashboard: DashboardScreen,
+    Community: CommunityScreen,
+
+    BillsPayment: BillsPaymentScreen,
+    Inquiries: InquiriesScreen,
+    Service: ServiceScreen
   },
   {
-    initialRouteName: 'AuthLoading',
-
+    initialRouteName: "Walkthrough",
+    navigationOptions: {
+      headerStyle: {
+        backgroundColor: "#f4511e"
+      },
+      headerTintColor: "#fff",
+      headerTitleStyle: {
+        fontWeight: "bold"
+      }
+    }
   }
 );
 
-
 export default class App extends React.Component {
   render() {
-    return <RootStack />;
+    return <AppStack />
   }
 }
