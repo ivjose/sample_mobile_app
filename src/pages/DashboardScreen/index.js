@@ -106,7 +106,8 @@ export default class DashboardScreen extends React.Component {
 
             <Card>
               <CardItem button>
-                <Icon active name="logo-googleplus" />
+           
+                 <Image  style={{height: 'auto', width: 40,}}  source={require("../../assets/img/bills-payment-icon.png")}/>
                 <Text>Google Plus</Text>
                 <Right>
                   <Icon name="arrow-forward" />
