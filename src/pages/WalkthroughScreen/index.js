@@ -47,21 +47,21 @@ export default class extends Component {
     images: [
       {
         id: "1",
-        url: require("./img/balloon-chair-dark-1391580.jpg"),
+        url: require("./img/1.png"),
         title: "USE GCASH AS PAYMENT",
         content: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout."
       },
       {
         id: "1",
-        url: require("./img/basket-beautiful-beauty-1386604.jpg"),
+        url: require("./img/2.png"),
         title: "BILLS MONITORING",
         content: "Contrary to popular belief, Lorem Ipsum is not simply random text. Lorem Ipsum is not simply random text. Lorem Ipsum is not simply random text not simply random text."
       },
       {
         id: "1",
-        url: require("./img/beautiful-beauty-belt-1408183.jpg"),
-        title: "USE GCASH AS PAYMENT",
-        content: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable."
+        url: require("./img/3.png"),
+        title: "SERVICE REQUEST",
+        content: "There are many variations of passages of Lorem Ipsum  LoremIpsuma, but the majority have suffered alteration in some form, by injected humour."
       },
       
     ]
