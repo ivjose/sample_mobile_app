@@ -139,7 +139,7 @@ class CommunityScreen extends Component {
             block
             large
             style={{ marginLeft: 20, marginRight: 20, marginBottom: 20,  marginTop: 20  }}
-           
+           onPress={() => this.props.navigation.navigate('Dashboard')}
           >
             <Text>JOIN NOW</Text>
           </Button>
