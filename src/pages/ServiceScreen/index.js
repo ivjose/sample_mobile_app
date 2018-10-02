@@ -45,15 +45,18 @@ class ServiceScreen extends Component {
           <Content>
             <List>
               {datas.map((data, i) => (
-                <ListItem key={i}>
+                <ListItem style={{paddingTop: 25, paddingBottom: 25}} key={i} onPress={() => this.props.navigation.navigate("Inquiries")}>
                   <Left>
-                    <Text>{data}</Text>
+                    <Text style={{fontWeight: 'bold'}}>{data}</Text>
                   </Left>
                   <Right>
-                    <Icon name="ios-arrow-forward" />
+                    <Icon name="ios-arrow-forward"  style={{color: '#244958' }} />
                   </Right>
                 </ListItem>
               ))}
+
+
+              
             </List>
           </Content>
         </Container>

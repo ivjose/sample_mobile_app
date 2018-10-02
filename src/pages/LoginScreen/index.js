@@ -66,11 +66,11 @@ class LoginScreen extends Component {
             <Item   last >
             
               <Input style={{height: 100,  fontSize: 18}} placeholder="Username"/>
-              <Icon active name="person" style={{paddingRight: 30, color: '#34BEEF', fontSize: 32}} />
+              <Icon active name="person" style={{paddingRight: 30, fontSize: 32}} />
             </Item>
             <Item style={{borderBottomWidth: 0}}> 
               <Input style={{height: 100, fontSize: 18, borderBottomWidth: 0}} placeholder="Password"/>
-              <Icon active name="md-unlock" style={{paddingRight: 30, color: '#34BEEF', fontSize: 32}} />
+              <Icon active name="md-unlock" style={{paddingRight: 30, fontSize: 32}} />
             </Item>
             </Form>
             <Form>

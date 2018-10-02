@@ -92,7 +92,9 @@ export default class DashboardScreen extends React.Component {
                     style={{
                       flex: 1,
                       justifyContent: "center",
-                      alignItems: "center"
+                      alignItems: "center",
+                      paddingTop: 25,
+                      paddingBottom: 25
                     }}
                   >
                     <Text style={{ fontWeight: "bold", fontSize: 18 }}>
@@ -105,33 +107,62 @@ export default class DashboardScreen extends React.Component {
                 <CardItem
                   footer
                   button
-                  onPress={() => alert("This is Card Footer")}
+                  onPress={() => this.props.navigation.navigate("BillsPayment")}
+                  style={{backgroundColor: '#34BEEF', borderRadius: 3, position: 'relative' }}
                 >
-                  <Text>paynow</Text>
+                 <Image  style={{position: 'absolute', left: 0 , bottom: 0, width: 100}}  source={require("../../assets/img/btn-icon.png")}/>
+                  <Text style={{color: '#fff', padding: 15, textAlign: 'center' , width: '100%' }}>PAYNOW</Text>
                 </CardItem>
               </Card>
 
             <Card>
-              <CardItem button>
+              <CardItem button onPress={() => this.props.navigation.navigate("BillsPayment")}>
            
-                 <Image  style={{height: 'auto', width: 40,}}  source={require("../../assets/img/bills-payment-icon.png")}/>
-                <Text>Google Plus</Text>
-                <Right>
-                  <Icon name="arrow-forward" />
+                 <Image  style={{ width: 50, marginRight: 10}}  source={require("../../assets/img/bills-payment-icon.png")}/>
+                <Body style={{flex: 6}}>
+
+                  <Text>Bills Payment</Text>
+                  <Text note>At vero eos et accusamus et iusto odio dignissimos ducimus qui </Text>
+                </Body>
+                <Right style={{flex: 1,  width: 20}}>
+                  <Icon name="ios-arrow-forward" style={{color: '#244958', fontSize: 28 }}/>
+                </Right>
+              </CardItem>
+            </Card>
+        <Card>
+              <CardItem button onPress={() => this.props.navigation.navigate("Service")}>
+           
+                 <Image  style={{ width: 50, marginRight: 10}}  source={require("../../assets/img/service-request-icon.png")}/>
+                <Body style={{flex: 6}}>
+
+                  <Text>Service Request</Text>
+                  <Text note>At vero eos et accusamus et iusto odio dignissimos ducimus qui</Text>
+                </Body>
+                <Right style={{flex: 1,  width: 20}}>
+                  <Icon name="ios-arrow-forward" style={{color: '#244958', fontSize: 28 }}/>
                 </Right>
               </CardItem>
             </Card>
 
-              <Card>
-                <CardItem button>
-                  <Icon active name="logo-googleplus" />
-                  <Text>Google Plus</Text>
-                  <Right>
-                    <Icon name="arrow-forward" />
-                  </Right>
-                </CardItem>
-              </Card>
-              <Button onPress={() => this.props.navigation.navigate("Community")}>
+             <Card style={{marginBottom: 40}}>
+              <CardItem button>
+           
+                 <Image  style={{ width: 50, marginRight: 10}}  source={require("../../assets/img/sample-form-icon.png")}/>
+                <Body style={{flex: 6}}>
+
+                  <Text>Sample Forms</Text>
+                  <Text note>At vero eos et accusamus et iusto odio dignissimos ducimus qui </Text>
+                </Body>
+                <Right style={{flex: 1,  width: 20}}>
+                  <Icon name="ios-arrow-forward" style={{color: '#244958', fontSize: 28 }}/>
+                </Right>
+              </CardItem>
+            </Card>
+           
+
+
+
+              {/* <Button onPress={() => this.props.navigation.navigate("Community")}>
                 <Text>Community</Text>
               </Button>
 
@@ -147,7 +178,7 @@ export default class DashboardScreen extends React.Component {
 
               <Button onPress={() => this.props.navigation.navigate("Inquiries")}>
                 <Text>Inquiries</Text>
-              </Button>
+              </Button> */}
             </View>
           </Content>
         </Container>
