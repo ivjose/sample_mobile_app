@@ -112,13 +112,14 @@ class TermsScreen extends Component {
                 flex: 1,
                 flexDirection: "row",
                 paddingTop: 40,
-                paddingBottom: 80
+                paddingBottom: 80,
+                paddingLeft: 20,
+                paddingRight: 20
               }}
             >
               <CheckBox style={{ marginRight: 20 }} />
               <Text style={{ fontWeight: "bold" }}>
-                I AGREE WITH THE TERMS & CONDITIONS
-                I AGREE WITH THE TERMS & CONDITIONS
+                I AGREE WITH THE TERMS & CONDITIONS 
               </Text>
             </Body>
           </Content>
