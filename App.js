@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
-import { View, Text, Button, AsyncStorage, StatusBar } from "react-native";
-import { createSwitchNavigator, createStackNavigator } from "react-navigation";
+import SplashScreen from 'react-native-splash-screen'
+import { createStackNavigator } from "react-navigation";
 import DashboardScreen from "./src/pages/DashboardScreen";
 import AuthLoadingScreen from "./src/pages/AuthLoadingScreen";
 import BillsPaymentScreen from "./src/pages/BillsPaymentScreen";
@@ -43,6 +43,13 @@ const AppStack = createStackNavigator(
 );
 
 export default class App extends React.Component {
+
+  componentDidMount(){
+    setTimeout(() => {
+      SplashScreen.hide();
+    }, 1500);
+  }
+
   render() {
     return <AppStack />
   }
