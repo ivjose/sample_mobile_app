@@ -37,15 +37,15 @@ class CommunityScreen extends Component {
         <Container style={styles.container}>
         
             <ImageBackground
-              source={require("../../assets/img/community-img.jpeg")}
+              source={require("../../assets/img/community-img.png")}
               style={{
                 flex: 1, 
-                width: width
+                width: '100%'
               }}
-              resizeMode="stretch"
+              resizeMode="cover"
             >
              {/* <View style={styles.overlay} /> */}
-             <LinearGradient  colors={['rgba(33, 189, 117,0.8)', 'rgba(33, 189, 117,0.2)']} style={styles.overlay} />
+             {/* <LinearGradient  colors={['rgba(33, 189, 117,0.8)', 'rgba(33, 189, 117,0.2)']} style={styles.overlay} /> */}
               <Header noShadow transparent>
                 <Left style={{ flex: 1 }}>
                   <Button
@@ -137,11 +137,12 @@ class CommunityScreen extends Component {
           </Content>
           <Button
             block
-            large
-            style={{ marginLeft: 20, marginRight: 20, marginBottom: 20,  marginTop: 20  }}
+        
+            style={{ marginLeft: 20, marginRight: 20, marginBottom: 20,  marginTop: 20 , paddingTop: 30, paddingBottom: 30 }}
+            
            onPress={() => this.props.navigation.navigate('Dashboard')}
           >
-            <Text>JOIN NOW</Text>
+            <Text         style={{fontWeight: 'bold'}}>JOIN NOW</Text>
           </Button>
         </Container>
       </MainWrapper>

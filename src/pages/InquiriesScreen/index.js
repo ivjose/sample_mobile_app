@@ -87,12 +87,11 @@ class InquiriesScreen extends Component {
             </Form>
           </Content>
           <Button
-            block
-            large
-            light
-            style={{ marginLeft: 20, marginRight: 20, marginBottom: 20 }}
+            block 
+            
+            style={{ marginLeft: 20, marginRight: 20, marginBottom: 20, paddingTop: 30, paddingBottom: 30, backgroundColor: '#DDDDDD' }}
           >
-            <Text>SEND</Text>
+            <Text style={{fontWeight: 'bold', color: '#fff'}}>SEND</Text>
           </Button>
         </Container>
       </MainWrapper>

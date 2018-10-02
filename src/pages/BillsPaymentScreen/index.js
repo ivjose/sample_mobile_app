@@ -167,8 +167,8 @@ class BillsPaymentScreen extends Component {
             
          
            
-           <Button block large style={{marginLeft: 20, marginRight: 20, marginBottom: 20}}>
-            <Text>PAY NOW</Text>
+           <Button block style={{marginLeft: 20, marginRight: 20, marginBottom: 20, paddingTop: 30, paddingBottom: 30}}>
+            <Text style={{fontWeight: 'bold'}}>PAY NOW</Text>
           </Button>
   
           </Content>
