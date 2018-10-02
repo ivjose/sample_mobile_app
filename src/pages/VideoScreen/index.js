@@ -39,7 +39,7 @@ class VideoScreen extends Component {
             style={{ height: "auto", width: "100%", flex: 1 }}
           />
 
-          <Content style={{ padding: 20, paddingBottom: 50 }}>
+          <Content style={{ padding: 20 }}>
             <Text>WATCH THIS</Text>
             <Text
               style={{
@@ -68,7 +68,7 @@ class VideoScreen extends Component {
               transparent
               dark
               onPress={() => this.props.navigation.navigate("Login")}
-              style={{ paddingTop: 30, paddingBottom: 30, }}
+              style={{ paddingTop: 30, paddingBottom: 30, marginBottom: 50 }}
             >
               
               <Text  style={{fontWeight: 'bold'}}>SKIP THIS, I'LL WATCH LATER</Text>
