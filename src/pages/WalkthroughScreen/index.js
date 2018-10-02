@@ -6,7 +6,8 @@ import {
   Text
 } from 'react-native'
 import Swiper from 'react-native-swiper';
-import { Button } from "native-base";
+import MainWrapper from "../../components/MainWrapper";
+import { Button, Container, Content } from "native-base";
 
 
 const { width, height } = Dimensions.get('window')
@@ -84,7 +85,8 @@ export default class extends Component {
   render () {
     
     return (
-      <View style={styles.container}>
+      <MainWrapper>
+         <Container style={styles.container}> 
         <Swiper
           index={this.state.index}
           style={styles.wrapper}
@@ -144,10 +146,12 @@ export default class extends Component {
           }
 
         </Swiper>
-        <Button full onPress={this.handleNext}>
-          <Text style={{ color: "white" }}>Next</Text>
+        <Button full large onPress={this.handleNext}>
+          <Text style={{ color: "white", fontWeight: 'bold' }}>Next</Text>
         </Button>
-      </View>
+
+      </Container>
+      </MainWrapper>
     )
   }
 }

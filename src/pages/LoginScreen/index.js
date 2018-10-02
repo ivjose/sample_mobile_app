@@ -80,11 +80,11 @@ class LoginScreen extends Component {
           </Content>
           <Button
             full
-            large
-       
+                   style={{ paddingTop: 30, paddingBottom: 30 }}
+
             onPress={() => this.props.navigation.navigate("Dashboard")}
           >
-            <Text>SIGN IN</Text>
+            <Text         style={{fontWeight: 'bold'}}>SIGN IN</Text>
           </Button>
         </Container>
       </MainWrapper>
