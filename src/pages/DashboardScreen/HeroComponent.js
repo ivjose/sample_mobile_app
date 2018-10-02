@@ -6,9 +6,9 @@ const { width, height } = Dimensions.get('window')
 
 export default function ({path}){
   return(
-    <View style={{ height: 250, backgroundColor: '#34BEEF', paddingTop: 10, marginBottom: 15 }}>
+    <View style={{ height: 250, backgroundColor: '#34BEEF', paddingTop: 10 }}>
       <View style={{ height: 200}}>
-        <ScrollView horizontal indicatorStyle="default" >
+        <ScrollView horizontal indicatorStyle="default">
           <ImageBackground
         
             imageStyle={{ borderRadius: 5 }}
