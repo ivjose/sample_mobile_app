@@ -1,6 +1,6 @@
 import React from "react";
 import MainWrapper from "../../components/MainWrapper";
-import { StyleSheet } from "react-native";
+import { StyleSheet ,View, Image} from "react-native";
 import {
   Container,
   Header,
@@ -16,7 +16,8 @@ import {
   Body,
   StyleProvider,
   Card,
-  CardItem
+  CardItem,Badge,
+  
 } from "native-base";
 
 export default class DashboardScreen extends React.Component {
@@ -29,13 +30,29 @@ export default class DashboardScreen extends React.Component {
       <MainWrapper>
         <Container style={styles.container}>
           <Header style={{ backgroundColor: "#34BEEF" }}>
-            <Button transparent onPress={() => this.props.navigation.goBack()}>
-              <Icon name="arrow-back" />
-            </Button>
+            <Left  style={{flex: 1}}>
+              <Button transparent onPress={() => this.props.navigation.goBack()}>
+                <Icon name="md-menu" />
+              </Button>
 
-            <Body style={{ backgroundColor: "red" }}>
-              <Title>Dashboard</Title>
-            </Body>
+          </Left>
+
+              <Body style={{flex: 5, flexDirection: 'row', justifyContent: 'flex-start', alignItems: 'center'}}>
+              <Image  style={{height: 40, width: 40, borderRadius: 40}}  source={require("../../assets/img/user-profile-img.png")}/>
+                <Text style={{color: '#fff', marginLeft: 10}}>John Doe</Text>
+              </Body>
+              
+          <Right>
+          <View style={{position: 'relative'}}>
+
+          
+             <Badge style={{width: 21, height: 20, position: 'absolute', right: 30, marginTop: -5, zIndex: 2, backgroundColor: '#FF7800'  }}>
+              <Text style={{fontSize: 10, lineHeight: 18, position: 'relative',  zIndex: 4}}>5</Text>
+            </Badge>
+                    <Icon name='md-mail' style={{color: '#fff', marginRight: 10}} />
+                      </View>
+              </Right>
+          
           </Header>
 
           <Content style={{ padding: 20 }}>
@@ -132,6 +149,7 @@ export default class DashboardScreen extends React.Component {
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: "#FFF"
+    // backgroundColor: "#FFF"
+    flex: 1
   }
 });
