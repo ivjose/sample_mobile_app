@@ -118,6 +118,7 @@ class TermsScreen extends Component {
               <CheckBox style={{ marginRight: 20 }} />
               <Text style={{ fontWeight: "bold" }}>
                 I AGREE WITH THE TERMS & CONDITIONS
+                I AGREE WITH THE TERMS & CONDITIONS
               </Text>
             </Body>
           </Content>

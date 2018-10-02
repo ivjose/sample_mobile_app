@@ -39,7 +39,7 @@ class VideoScreen extends Component {
             style={{ height: "auto", width: "100%", flex: 1 }}
           />
 
-          <Content style={{ padding: 20 }}>
+          <Content style={{ padding: 20, paddingBottom: 50 }}>
             <Text>WATCH THIS</Text>
             <Text
               style={{

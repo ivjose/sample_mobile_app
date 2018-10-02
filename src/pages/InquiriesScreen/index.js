@@ -44,7 +44,7 @@ class InquiriesScreen extends Component {
               </Button>
             </Left>
             <Body style={{ flex: 5 }}>
-              <Title style={{ alignSelf: "center" , fontWeight: 'bold'}}>INQUERIES</Title>
+              <Title style={{ alignSelf: "center" , fontWeight: 'bold'}}>INQUIRIES</Title>
             </Body>
             <Right style={{ flex: 1 }} />
           </Header>
