@@ -74,12 +74,13 @@ class InquiriesScreen extends Component {
                 style={{
                   flex: 1,
                   flexDirection: "column",
-                  alignItems: "flex-start"
+                  alignItems: "flex-start",
                 }}
               >
                 <Label>MESSAGE</Label>
                 <Textarea
                   rowSpan={6}
+                  style={{ width: "100%" }}
                   placeholderTextColor="#D5C9C9"
                   placeholder="type concern here..."
                 />
