@@ -29,7 +29,7 @@ const AppStack = createStackNavigator(
     Service: ServiceScreen
   },
   {
-    initialRouteName: "Walkthrough",
+    initialRouteName: "Dashboard",
     navigationOptions: {
       headerStyle: {
         backgroundColor: "#f4511e"

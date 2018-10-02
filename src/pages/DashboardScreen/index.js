@@ -1,10 +1,11 @@
 import React from "react";
 import MainWrapper from "../../components/MainWrapper";
-import { StyleSheet ,View, Image} from "react-native";
+import { StyleSheet, ScrollView, Image, Dimensions } from "react-native";
 import {
   Container,
+  View,
   Header,
-  Title,
+  Badge,
   Content,
   Button,
   Icon,
@@ -16,9 +17,11 @@ import {
   Body,
   StyleProvider,
   Card,
-  CardItem,Badge,
-  
+  CardItem
 } from "native-base";
+import HeroComponent from "./HeroComponent";
+
+const { width, height } = Dimensions.get('window')
 
 export default class DashboardScreen extends React.Component {
   static navigationOptions = {
@@ -29,7 +32,7 @@ export default class DashboardScreen extends React.Component {
     return (
       <MainWrapper>
         <Container style={styles.container}>
-          <Header style={{ backgroundColor: "#34BEEF" }}>
+        <Header style={{ backgroundColor: "#34BEEF" }}>
             <Left  style={{flex: 1}}>
               <Button transparent onPress={() => this.props.navigation.goBack()}>
                 <Icon name="md-menu" />
@@ -55,91 +58,96 @@ export default class DashboardScreen extends React.Component {
           
           </Header>
 
-          <Content style={{ padding: 20 }}>
-            <Card style={{ padding: 10 }}>
-              <CardItem
-                header
-                button
-                onPress={() => alert("This is Card Header")}
-                style={{backgroundColor: '#0EB159', borderRadius: 3, padding: 5 }}
-              >
-                <Left style={{ flex: 4 }}>
-                  <Body  style={{padding: 0 }}>
-                    <Text note numberOfLines={1} style={{ fontSize: 12, color: '#f9f9f9' }}>
-                     Flair Tower, South
-                    </Text>
-                    <Text style={{color: '#fff'}}>MANDALUYONG</Text>
-                  </Body>
-                </Left>
-                <Body style={{ flex: 3 }}>
-                  <Text note numberOfLines={1} style={{ fontSize: 12 , color: '#f9f9f9'}}>
-                    RM: 9017
-                  </Text>
-                </Body>
-                <Right style={{ flex: 1 }}>
-                  <Icon name="ios-arrow-down" style={{ color: '#f9f9f9'}}/>
-                </Right>
-              </CardItem>
-              <CardItem>
-                <Body
-                  style={{
-                    flex: 1,
-                    justifyContent: "center",
-                    alignItems: "center"
-                  }}
+          <Content>
+
+            <HeroComponent />
+
+            <View style={{ paddingLeft:20, paddingRight: 20, marginTop: -40 }}>
+              <Card style={{ padding: 10 }}>
+                <CardItem
+                  header
+                  button
+                  onPress={() => alert("This is Card Header")}
+                  style={{backgroundColor: '#0EB159', borderRadius: 3, padding: 5 }}
                 >
-                  <Text style={{ fontWeight: "bold", fontSize: 18 }}>
-                    PAYMENT DUE
-                  </Text>
-                  <Text style={{ fontSize: 32 }}>P16,756.00</Text>
-                  <Text note>For December 20, 2018</Text>
-                </Body>
-              </CardItem>
-              <CardItem
-                footer
-                button
-                onPress={() => alert("This is Card Footer")}
+                  <Left style={{ flex: 4 }}>
+                    <Body  style={{padding: 0 }}>
+                      <Text note numberOfLines={1} style={{ fontSize: 12, color: '#f9f9f9' }}>
+                      Flair Tower, South
+                      </Text>
+                      <Text style={{color: '#fff'}}>MANDALUYONG</Text>
+                    </Body>
+                  </Left>
+                  <Body style={{ flex: 3 }}>
+                    <Text note numberOfLines={1} style={{ fontSize: 12 , color: '#f9f9f9'}}>
+                      RM: 9017
+                    </Text>
+                  </Body>
+                  <Right style={{ flex: 1 }}>
+                    <Icon name="ios-arrow-down" style={{ color: '#f9f9f9'}}/>
+                  </Right>
+                </CardItem>
+                <CardItem>
+                  <Body
+                    style={{
+                      flex: 1,
+                      justifyContent: "center",
+                      alignItems: "center"
+                    }}
+                  >
+                    <Text style={{ fontWeight: "bold", fontSize: 18 }}>
+                      PAYMENT DUE
+                    </Text>
+                    <Text style={{ fontSize: 32 }}>P16,756.00</Text>
+                    <Text note>For December 20, 2018</Text>
+                  </Body>
+                </CardItem>
+                <CardItem
+                  footer
+                  button
+                  onPress={() => alert("This is Card Footer")}
+                >
+                  <Text>paynow</Text>
+                </CardItem>
+              </Card>
+
+              <Card>
+                <CardItem button>
+                  <Icon active name="logo-googleplus" />
+                  <Text>Google Plus</Text>
+                  <Right>
+                    <Icon name="arrow-forward" />
+                  </Right>
+                </CardItem>
+              </Card>
+
+              <Card>
+                <CardItem button>
+                  <Icon active name="logo-googleplus" />
+                  <Text>Google Plus</Text>
+                  <Right>
+                    <Icon name="arrow-forward" />
+                  </Right>
+                </CardItem>
+              </Card>
+              <Button onPress={() => this.props.navigation.navigate("Community")}>
+                <Text>Community</Text>
+              </Button>
+
+              <Button onPress={() => this.props.navigation.navigate("Service")}>
+                <Text>Service</Text>
+              </Button>
+
+              <Button
+                onPress={() => this.props.navigation.navigate("BillsPayment")}
               >
-                <Text>paynow</Text>
-              </CardItem>
-            </Card>
+                <Text>Bills Payment</Text>
+              </Button>
 
-            <Card>
-              <CardItem button>
-                <Icon active name="logo-googleplus" />
-                <Text>Google Plus</Text>
-                <Right>
-                  <Icon name="arrow-forward" />
-                </Right>
-              </CardItem>
-            </Card>
-
-            <Card>
-              <CardItem button>
-                <Icon active name="logo-googleplus" />
-                <Text>Google Plus</Text>
-                <Right>
-                  <Icon name="arrow-forward" />
-                </Right>
-              </CardItem>
-            </Card>
-            <Button onPress={() => this.props.navigation.navigate("Community")}>
-              <Text>Community</Text>
-            </Button>
-
-            <Button onPress={() => this.props.navigation.navigate("Service")}>
-              <Text>Service</Text>
-            </Button>
-
-            <Button
-              onPress={() => this.props.navigation.navigate("BillsPayment")}
-            >
-              <Text>Bills Payment</Text>
-            </Button>
-
-            <Button onPress={() => this.props.navigation.navigate("Inquiries")}>
-              <Text>Inquiries</Text>
-            </Button>
+              <Button onPress={() => this.props.navigation.navigate("Inquiries")}>
+                <Text>Inquiries</Text>
+              </Button>
+            </View>
           </Content>
         </Container>
       </MainWrapper>
@@ -149,7 +157,12 @@ export default class DashboardScreen extends React.Component {
 
 const styles = StyleSheet.create({
   container: {
-    // backgroundColor: "#FFF"
-    flex: 1
+    backgroundColor: "#FFF"
+  },
+  imgStyle: {
+    width: width-50,
+    height: "auto",
+    marginLeft: 20,
+    borderRadius: 5
   }
 });
