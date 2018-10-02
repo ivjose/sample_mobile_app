@@ -35,33 +35,17 @@ class LoginScreen extends Component {
     return (
       <MainWrapper>
         <Container style={styles.container}>
-          <ImageBackground
-            source={require("../../assets/img/login-bg.png")}
-            style={{
-              flex: 2,
-              width: '100%'
-            }}
-            resizeMode="cover"
-          >
-            {/* <View style={styles.overlay} /> */}
-            {/* <LinearGradient
-              colors={["rgba(33, 189, 117,0.8)", "rgba(33, 189, 117,0.2)"]}
-              style={styles.overlay}
-            /> */}
-
-            <View
-              style={{
-                flex: 1,
-                justifyContent: "center",
-                alignItems: "flex-start",
-                padding: 20
-              }}
-            >
-    
-            </View>
-          </ImageBackground>
+          
 
           <Content>
+          <Image
+            source={require("../../assets/img/login-bg.png")}
+            style={{
+              height: width,
+              width: '100%'
+            }}
+         
+          /> 
            <Form>
             <Item   last >
             
@@ -80,7 +64,7 @@ class LoginScreen extends Component {
           </Content>
           <Button
             full
-                   style={{ paddingTop: 30, paddingBottom: 30 }}
+                   style={{ paddingTop: 40, paddingBottom: 40 }}
 
             onPress={() => this.props.navigation.navigate("Dashboard")}
           >

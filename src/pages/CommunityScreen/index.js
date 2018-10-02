@@ -56,7 +56,7 @@ class CommunityScreen extends Component {
                   </Button>
                 </Left>
                 <Body style={{ flex: 5 }}>
-                  <Title style={{ alignSelf: "center" }}>
+                  <Title style={{ alignSelf: "center", fontWeight: 'bold' }}>
                     COMMUNITY
                   </Title>
                 </Body>

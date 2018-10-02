@@ -123,7 +123,7 @@ class TermsScreen extends Component {
           </Content>
           <Button
             full
-            style={{ paddingTop: 30, paddingBottom: 30 }}
+            style={{ paddingTop: 40, paddingBottom: 40 }}
             onPress={() => this.props.navigation.navigate("Video")}
           >
             <Text style={{ fontWeight: "bold" }}>AGREE</Text>

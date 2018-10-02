@@ -3,11 +3,11 @@ import {
   View,
   Image,
   Dimensions,
-  Text
+  
 } from 'react-native'
 import Swiper from 'react-native-swiper';
 import MainWrapper from "../../components/MainWrapper";
-import { Button, Container, Content } from "native-base";
+import { Button, Container, Content, Text } from "native-base";
 
 
 const { width, height } = Dimensions.get('window')
@@ -146,7 +146,7 @@ export default class extends Component {
           }
 
         </Swiper>
-        <Button full large onPress={this.handleNext}>
+        <Button full  style={{ paddingTop: 40, paddingBottom: 40 }} onPress={this.handleNext}>
           <Text style={{ color: "white", fontWeight: 'bold' }}>Next</Text>
         </Button>
 

@@ -79,7 +79,7 @@ class BillsPaymentScreen extends Component {
               </Button>
             </Left>
             <Body  style={{flex: 5}}>
-              <Title style={{alignSelf: 'center' }}>Bills Payment</Title>
+              <Title style={{alignSelf: 'center', fontWeight: 'bold' }}>Bills Payment</Title>
             </Body>
                <Right style={{flex: 1}}/>
           </Header>
