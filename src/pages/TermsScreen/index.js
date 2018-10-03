@@ -26,7 +26,7 @@ import {
   CheckBox
 } from "native-base";
 
-const datas = ["INQUERIES", "COMPLAINS", "REQUEST", "WARRANTY"];
+const datas = ["INQUERIES", "COMPLAINTS", "REQUEST", "WARRANTY"];
 const { height, width } = Dimensions.get("window");
 class TermsScreen extends Component {
   static navigationOptions = {
@@ -36,7 +36,7 @@ class TermsScreen extends Component {
     return (
       <MainWrapper>
         <Container style={styles.container}>
-          <Content style={{ padding: 20 }}>
+          <Content style={{ paddingLeft: 25, paddingRight: 25, paddingTop: 20, paddingBottom: 20 }}>
             <Text
               style={{
                 color: "#B4C5E7",

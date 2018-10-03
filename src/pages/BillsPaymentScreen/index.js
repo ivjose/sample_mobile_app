@@ -24,13 +24,13 @@ import {
 const datas = [
   {
     id: 1,
-    label: "ASSOSIATION FEE",
+    label: "ASSOCIATION DUES",
     amount: "P 3,525.00",
     checked: true
   },
   {
     id: 2,
-    label: "Utilities",
+    label: "UTILITIES",
     amount: "P 500.00",
     checked: true
   },
@@ -46,7 +46,7 @@ const paymentData = [
   {
     id: 1,
     label: "GCASH",
-    text: "You will receive 5% rebate on your next transaction and a chance to win a ipad until promo last.",
+    text: "You will receive 5% rebate on your next transaction and a chance to win an iPad until promo last.",
     checked: true
   },
   {
@@ -79,7 +79,7 @@ class BillsPaymentScreen extends Component {
               </Button>
             </Left>
             <Body  style={{flex: 5}}>
-              <Title style={{alignSelf: 'center', fontWeight: 'bold' }}>Bills Payment</Title>
+              <Title style={{alignSelf: 'center', fontWeight: 'bold' }}>BILLS PAYMENT</Title>
             </Body>
                <Right style={{flex: 1}}/>
           </Header>
@@ -104,10 +104,11 @@ class BillsPaymentScreen extends Component {
                     borderTopWidth: i === 0 ? 0.5 : 0,
                     marginLeft: 0,
                     paddingLeft: 0,
-                    borderColor: "#a9a9a9"
+                    borderColor: "#a9a9a9",
+            
                   }}
                 >
-                  <Left>
+                  <Left style={{paddingLeft: 15}}>
                     <Body>
                       <Text note numberOfLines={1} style={{ fontSize: 12 }}>
                         {data.label}
@@ -115,7 +116,7 @@ class BillsPaymentScreen extends Component {
                       <Text>{data.amount}</Text>
                     </Body>
                   </Left>
-                  <Right>
+                  <Right style={{paddingRight: 15}}>
                     <Body style={{ flex: 1, flexDirection: "row" }}>
                       <CheckBox
                         checked={data.checked}

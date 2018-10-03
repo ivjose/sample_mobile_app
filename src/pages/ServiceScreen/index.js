@@ -17,7 +17,7 @@ import {
   StyleProvider
 } from "native-base";
 
-const datas = ["INQUERIES", "COMPLAINS", "REQUEST", "WARRANTY"];
+const datas = ["INQUIRIES", "COMPLAINTS", "REQUESTS", "WARRANTY"];
 
 class ServiceScreen extends Component {
   static navigationOptions = {

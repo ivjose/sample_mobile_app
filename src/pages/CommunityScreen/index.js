@@ -25,7 +25,7 @@ import {
   View
 } from "native-base";
 
-const datas = ["INQUERIES", "COMPLAINS", "REQUEST", "WARRANTY"];
+const datas = ["INQUERIES", "COMPLAINTS", "REQUEST", "WARRANTY"];
 const { height, width } = Dimensions.get("window");
 class CommunityScreen extends Component {
   static navigationOptions = {
@@ -40,7 +40,8 @@ class CommunityScreen extends Component {
               source={require("../../assets/img/community-img.png")}
               style={{
                 flex: 1, 
-                width: '100%'
+                  height: 'auto',
+              width: '100%'
               }}
               resizeMode="cover"
             >
